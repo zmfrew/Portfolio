@@ -1,0 +1,214 @@
+/* Global Styles */
+body {
+    font-family: 'Nunito', sans-serif;  /* Modern, clean font */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    background-color: #f7f3e9;  /* Light paper color */
+    color: #2f3e46;  /* Dark neutral green for text */
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #f7f3e9;  /* Matches paper background for a cohesive look */
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);  /* Soft shadow */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #354f52;  /* Neutral green tone */
+}
+
+.nav-links a {
+    margin: 0 15px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    background-color: #cad2c5;  /* Light neutral green */
+    color: #fff;
+}
+
+/* About Section */
+#about {
+    background-color: #f1f3f0;  /* Very light green-gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#about h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    color: #2f3e46;  /* Dark neutral green for the heading */
+}
+
+.highlight {
+    color: #52796f;  /* Soft green tone */
+    font-weight: 600;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #52796f;  /* Soft green tone */
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.cta-button:hover {
+    background-color: #354f52;  /* Darker green */
+}
+
+/* Projects Section */
+#projects {
+    background-color: #f7f3e9;  /* Light paper-like background */
+    padding: 60px 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project {
+    background-color: #f1f3f0;  /* Light green-gray */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;  /* Smooth hover effect */
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);  /* Elevated shadow on hover */
+}
+
+.project-image {
+    width: 100%;
+    height: 400px;  /* Set a default height */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;  /* Ensure it behaves as a block element */
+}
+
+.project-content {
+    padding: 20px;
+    flex: 1;  /* Fills remaining space to keep buttons aligned */
+    text-align: left;
+}
+
+.project h3 {
+    margin-top: 0;
+    font-size: 1.6em;
+    color: #2f3e46;  /* Dark neutral green */
+}
+
+.project p {
+    margin: 15px 0;
+    color: #354f52;  /* Slightly lighter green */
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.button {
+    display: inline-block;
+    margin-top: auto;  /* Push button to bottom */
+    padding: 10px 25px;
+    background-color: #52796f;  /* Soft green */
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #354f52;  /* Darker green */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;  /* Single column for mobile */
+    }
+
+    .project-image {
+        height: 500px;  /* Adjust height for tablets and smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .project {
+        overflow-x: auto;  /* Enable horizontal scrolling */
+    }
+
+    .project-image {
+        height: 500px;  /* Further adjust height for very small screens */
+    }
+}
+
+
+/* Contact Section */
+#contact {
+    background-color: #f1f3f0;  /* Light green-gray */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact-link {
+    color: #52796f;  /* Soft green */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+    color: #354f52;  /* Darker green on hover */
+}
